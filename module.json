@@ -1,0 +1,10 @@
+{
+    "id": "instagram",
+    "name": "Instagram",
+    "description": "Adds a Instagram widget to HumHub`s sidebar.",
+    "keywords": ["instagram"],
+    "version": "1.0.0",
+    "humhub": {
+    "minVersion": "1.0"
+    }
+}
