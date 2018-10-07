@@ -6,7 +6,7 @@ use yii\helpers\Url;
 use humhub\modules\instagram\widgets\InstagramFrame;
 use humhub\models\Setting;
 
-class Events extends \yii\base\Object
+class Events extends \yii\base\BaseObject
 {
 
     public static function onAdminMenuInit(\yii\base\Event $event)
@@ -26,8 +26,8 @@ public static function addInstagramFrame($event)
         if (Yii::$app->user->isGuest) {
             return;
         }
-        $event->sender->view->registerAssetBundle(Assets::className());
-        $event->sender->addWidget(InstagramFrame::className(), [], [
+        $event->sender->view->registerAssetBundle(Assets::class);
+        $event->sender->addWidget(InstagramFrame::class, [], [
             'sortOrder' => Setting::Get('timeout', 'instagram')
         ]);
     }
